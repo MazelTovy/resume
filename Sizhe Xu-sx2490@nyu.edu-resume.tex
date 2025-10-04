@@ -1,0 +1,321 @@
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{forest}
+
+% Configure hyperref to remove colored boxes around links
+\hypersetup{
+    hidelinks,
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+    citecolor=black
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\github}[1]{
+  \href{#1}{\faGithub}
+}
+
+\newcommand{\paper}[1]{
+  % \href{#1}{\faScroll}
+  \href{#1}{\faLink}
+}
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumePubItem}[1]{
+  \item\small{#1 \vspace{1pt}} 
+}
+
+\newcommand{\resumeProjectItem}[2]{
+  \item\small{
+    \textbf{#1}{\\ \vspace{1pt} #2 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeProjectTitle}[3][]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#2} #1 & #3
+  \end{tabular*}\vspace{1pt}
+}
+
+\newcommand{\resumeItemContent}[2]{
+  {
+    #1\\ \vspace{1pt} \textbf{Tech: }#2\vspace{-3pt}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {#3} & {#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+% 添加一个处理长标题的特殊命令
+\newcommand{\resumeLongTitleSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \multicolumn{2}{l}{\textbf{#1}} \\
+      {#3} & {#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r@{\hspace{-17em}}l}
+  \textbf{{\LARGE Sizhe (Alex) Xu}} &  & \vspace{7pt}\\
+  \href{https://github.com/MazelTovy}{Github: ~~MazelTovy \github{https://github.com/MazelTovy}} & Email: & \href{mailto:sx2490@nyu.edu}{sx2490@nyu.edu}~~~~~ \\
+  %\href{https://github.com/MazelTovy}{Github: ~~github.com/MazelTovy\ \faGithubSquare} \\
+  % \href{https://github.com/MazelTovy}{Github: ~~MazelTovy \github{https://github.com/MazelTovy}} & Mobile: & (347)-712-0812 \\
+  Location: 370 Jay St, Brooklyn, New York, 11201 & Mobile: & (347)-712-0812~~~~~ \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\vspace{3pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {New York University}{Sept 2024 - June 2026}
+      {Master of Science - Urban Data Science}{}
+    \resumeItemListStart
+        \resumeItem{Courses}{Urban Computing \& AI, Data Science, Deep Learning, Computer Vision, Large Language and Vision Models, Transportation and Logistics, Innovative City Governance, Probability and Stochastic Processes}
+    \resumeItemListEnd
+    \resumeSubheading
+      {Dalian Jiaotong University}{Sept 2020 - June 2024}
+      {Bachelor of Engineering - Electronic Engineering}{}
+    \resumeItemListStart
+        \resumeItem{Courses}{Analog Electronics, Object-Oriented Programming, Algorithm Design, Machine Learning}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------------
+\vspace{-3pt}
+\section{Publications}
+\begin{enumerate}[leftmargin=*, label={[\arabic*].}, nosep]
+  \resumePubItem{\textbf{Sizhe Xu}{$^\ast$}, Renzhao Liang{$^\ast$}, Chenggang Xie, Jingru Chen, Feiyang Ren, Shu Yang, Takahiro Yabe, "Abstain Mask Retain Core: Time Series Prediction by Adaptive Masking Loss", \textit{Advances in Neural Information Processing Systems} (2025) \textbf{Spotlight (top 5\%)}. {$^\ast$} Denotes equal contribution.}
+  \resumePubItem{\textbf{Sizhe Xu}, Renzhao Liang, Jun Han, Qitong Sun, "A Hybrid Framework for Evaluating and Enhancing Syntactic and Semantic Diversity in Low-Resource Text Generation", \textit{Under Review} (2025).}
+  \resumePubItem{\textbf{Sizhe Xu}, Boyang Li, Donghak Lee, Takahiro Yabe, "Thinking on the Move (ToM): A Framework for LLM-Agent-based Reinforcement Learning in Urban Mobility Simulation", \textit{In Progress} (2025).}
+  \resumePubItem{Boyang Li, \textbf{Sizhe Xu}, Yulin Wu, Takahiro Yabe, "A Generalized RoPE for \textit{n}-Dimensional Position Embedding", \textit{In Progress} (2025).}
+\end{enumerate}
+
+%-----------RESEARCH-----------------
+\vspace{1pt}
+\section{Research}
+  \resumeSubHeadingListStart
+    \resumeLongTitleSubheading
+      {Abstain Mask Retain Core: Time Series Prediction by Adaptive Masking Loss \paper{https://github.com/MazelTovy/AMRC}}{High Score at NeurIPS}
+      {Co-first Author, Neural Information Processing Systems (NeurIPS) 2025 Spotlight}{Mar 2025 - Aug 2025}
+    \resumeItemListStart
+      \resumeItem{Theoretical Innovation}
+      {Challenged conventional "long-sequence information gain hypothesis" through systematic experimentation; discovered that appropriately truncating historical data paradoxically enhances prediction accuracy by eliminating redundant features and noise.}
+      \resumeItem{Methodological Framework}
+      {Developed AMRC (Adaptive Masking Loss with Representation Consistency) framework based on information bottleneck theory; integrated dynamic masking loss for discriminative temporal segment identification and representation consistency constraints for stable mapping relationships.}
+      \resumeItem{Performance Achievement}
+      {Achieved significant improvements across multiple datasets; over 50\% of samples exhibited improved predictive performance while effectively suppressing redundant feature learning.}
+    \resumeItemListEnd
+    
+    \resumeLongTitleSubheading
+      {A Hybrid Framework for Evaluating and Enhancing Syntactic and Semantic Diversity \paper{https://openreview.net/forum?id=iwA66tqyPo}}{Under Review}
+      {First Author, Under Review}{Jan 2025 - July 2025}
+    \resumeItemListStart
+      \resumeItem{Framework}
+      {Designed and implemented a hybrid framework integrating probabilistic generative models with LLMs for synthetic data generation in low-resource scenarios.}
+      \resumeItem{Innovation}
+      {Pioneered reference-free metrics for syntactic and semantic diversity evaluation, eliminating dependency on gold standards; leveraged LLMs for realistic text refinement while maintaining semantic integrity.}
+      \resumeItem{Performance}
+      {Enhanced downstream classification with 13\% F1-score improvement; generated text achieved higher human evaluation scores for naturalness and fluency while preserving key linguistic patterns.}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Urban Mobility Prediction for Commercial Site Selection}{Guided Study}
+      {NYU Center for Urban Science and Progress (Mentor: \textit{Prof. Takahiro Yabe})}{June 2025 - Present}
+    \resumeItemListStart
+      \resumeItem{LLM-enhanced Agent Modeling}
+      {Integrated Dewey and Cuebiq mobility datasets for Brooklyn Downtown analysis; pioneered LLM-generated user profiles in agent-based modeling to simulate individual decision-making and aggregate mobility behaviors for realistic forecasting.}
+      \resumeItem{Predictive Analytics Framework}
+      {Established evaluation framework benchmarking LLM-enhanced models against conventional discrete choice and gravity models; developed commercial site selection optimization through predictive mobility analytics.}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Intelligent School District Advisory Service}{Guided Study}
+      {NYU Center for Urban Science and Progress (Mentor: \textit{Prof. Zhaoxi Zhang})}{Dec 2024 - Apr 2025}
+    \resumeItemListStart
+      \resumeItem{Data Engineering}
+      {Designed scalable ETL pipeline for processing and integrating 15+ diverse educational datasets; implemented data quality monitoring with Great Expectations and optimized PostGIS queries for spatial joins.}
+      \resumeItem{Geospatial Analysis}
+      {Developed interactive platform visualizing geographic and school performance data; implemented Gemini-powered recommendation system for personalized school selection advice.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\vspace{-3pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Global Data Dive Competition - Skyline \& Sustainability \paper{https://docs.google.com/presentation/d/1Vf_OaO8iUelxuGhwhaDS-ypwzlFKihkM}}{New York, NY}{Best Technical Contribution Award Winner}{Feb 2025}
+		\resumeItemListStart
+      \resumeItem{Advanced LLM Integration}
+      {Implemented LLaMA-3-8B model with custom RAG architecture for real-time building energy efficiency analysis; optimized vector retrieval for 3D building data querying and developed prompt engineering techniques for domain-specific responses.}
+      \resumeItem{Urban Sustainability Platform}
+      {Created interactive 3D visualization of NYC buildings with energy compliance metrics; built end-to-end solution for policymakers and investors to assess sustainability impact through natural language queries and geospatial analytics.}
+		\resumeItemListEnd
+		
+    \resumeSubheading
+    {National College Student Smart Car Competition - Intelligent Vision Group \github{https://github.com/MazelTovy/smart-car-18th}}{Dalian, China}{Team Leader \& Primary Contributor - First Prize Winner}{Dec 2022 - July 2023}
+		\resumeItemListStart
+      \resumeItem{System Integration \& Leadership}
+      {Led 5-member multidisciplinary team through complete autonomous vehicle development cycle; designed and implemented integrated control algorithms for mechanical structure, embedded systems, and machine learning components.}
+      \resumeItem{Hardware \& Control Systems}
+      {Engineered Mecanum wheel-based chassis with 3D-printed modular storage compartments; developed custom PCB with NXP RT1064 microcontroller, DRV8701 motor drivers, and sensor fusion from ICM-20602 gyroscope and 4-directional encoders for precise motion control using Kalman filtering and PID optimization.}
+      \resumeItem{Computer Vision \& Automation}
+      {Implemented MobileNetV2-based object classification system with custom dataset captured using OpenART; achieved end-to-end automation for card detection, pickup, sorting, and storage tasks through integrated mechanical arm with SPT5410 servos and electromagnetic actuators.}
+		\resumeItemListEnd
+    % \resumeSubheading{Dalian Jiaotong University{On-site}
+    % {Research Assistant (Intern)}{Dec 2023 - May 2024}
+    % \resumeItemListStart
+    % \resumeItem{Structure Prototyping}
+    % {Designed car chassis in SolidWorks, 3D-printed PLA compartments using Ultimaker.}
+    % \resumeItem{Control System}
+    % {Developed motherboard with RT1064, DRV8701 driver, voltage regulation; integrated ICM-20602, IMU, encoders data on RT-Thread position estimation, stable motion control with Kalman filter and PID tuning.}
+    % \resumeItem{Object Recognition}
+    % {Trained a MobileNetv2-based classifier on custom dataset; implemented distributed inference on edge devices with TensorRT optimization.}
+    % \resumeItemListEnd
+		
+    \resumeSubheading{SnowFox Technology Co., Ltd.}{Remote}
+		{Embedded System Developer (Entrepreneurship)}{Nov 2022 - Apr 2024}
+		\resumeItemListStart
+        \resumeItem{Motion Capture \& Real-time Processing}
+        {Developed sensor fusion firmware for STM32F4 microcontrollers with MPU9250 9-DoF IMU arrays; implemented multi-rate EKF and quaternion-based orientation estimation with 200Hz sampling and efficient fixed-point computation for power-constrained wearable devices.}
+        \resumeItem{3D Visual Analytics}
+        {Created real-time biomechanical analysis pipeline with Unity HDRP renderer, IK solver optimization, and TensorFlow Lite for edge-deployed BiRNN movement classification (96.4\% accuracy); integrated performance metrics dashboard and RESTful API for cloud synchronization through AWS IoT Core.}
+        \resumeItem{Impact}
+        {Deployed at 5 ski resorts, increasing user 
+        satisfaction by 50\% and expanding customer 
+        base over 1,000 users.}
+		\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-3pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectTitle{Multi-modal Context-aware RAG System}{Dec 2024 - June 2025}
+\resumeItemContent{Developed RAG system handling text, images, and structured data with hybrid search and hallucination detection.}{LangChain, Pinecone, FAISS, HuggingFace Transformers, CLIP}
+
+\resumeProjectTitle[\github{https://github.com/MazelTovy/image_segmentation_beamer}]{Small Object Image Segmentation}{Mar 2024 - June 2024}
+\resumeItemContent{Active contour framework integrating improved YOLOv8, enhancing boundary precision and segmentation accuracy.}{PyTorch, OpenCV, YOLOv8, FPN, EMA, TensorRT, ONNX}
+
+\resumeProjectTitle{Ecological Model for Fungal Biocontrol}{Aug 2022 - Mar 2023}
+\resumeItemContent{Fungal growth management system for optimizing ecological balance and maximizing agricultural profitability.}{Tensorflow, RLib, MADDPG, PSO, PostgreSQL, Optuna, ArcGIS, Folium}
+
+% \resumeProjectTitle{Quantitative Trading System}{Jan 2024 - Apr 2024}
+% \resumeItemContent{Lightweight real-time price prediction and portfolio analysis system trained on historical stock markets data.}{Python, PyTorch, Ta-lib, TFT, XGBoost, EWMA, GluonTS, ONNX}
+
+% \resumeProjectTitle[\github{https://github.com/MazelTovy/TinyTikTok}]{TinyTikTok}{July 2023 - Oct 2023}
+% \resumeItemContent{Minimalistic TikTok backend with user authentication, uploading, liking, commenting, following, and messaging.}{Golang, Gin, MySQL, Redis, RabbitMQ, OSS, Nginx, Keycloak}
+\resumeSubHeadingListEnd
+
+\vspace{-3pt}
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~~~~~~Python, Rust, C++, R, SQL, Go, JAVA, \LaTeX, Swift}
+	\resumeSubItem{Frameworks}{~~~~Scikit, PyTorch, LangChain, CUDA, Django, Spring Boot, Unity, NodeJS}
+	\resumeSubItem{Tools}{~~~~~~~~~~~~~~SolidWorks, Docker, Kubernetes, ArcGIS, vLLM, Git, ONNX}
+	\resumeSubItem{Platforms}{~~~~~~~Ubuntu, Kali, Raspberry Pi, ROS, NVIDIA Jetson, GCP, AWS}
+	%\resumeSubItem{Soft Skills}{~~~~~~~Leadership, Project Management, Analytical Writing, Public Speaking, Communication, Time Management}
+\resumeSubHeadingListEnd
+% \section{Skills Summary}
+% 	\resumeSubHeadingListStart
+% 	\resumeSubItem{Languages}{~~~~~~Python, C++, Rust, SQL, CUDA, R, JavaScript, Go, JAVA}
+% 	\resumeSubItem{ML/AI}{~~~~~~~~~~~~PyTorch, TensorFlow, JAX, HuggingFace, LangChain, LlamaIndex, ONNX, Scikit-learn}
+% 	\resumeSubItem{HPC}{~~~~~~~~~~~~~~~CUDA, MPI, OpenMP, Ray, DeepSpeed, vLLM, TensorRT, SLURM, Distributed Training}
+% 	\resumeSubItem{Data/Cloud}{~~~~~~Docker, Kubernetes, AWS, Azure ML, GCP, Hadoop, Spark, Airflow, Elasticsearch}
+% \resumeSubHeadingListEnd
+
+\vspace{-3pt}
+\section{Honors and Awards}
+\begin{description}[font=$\bullet$]
+  \item{Spotlight Poster Presentation at NeurIPS 2025 - Sept, 2025 \paper{https://github.com/MazelTovy/AMRC}}
+  \vspace{-5pt}
+  \item{Best Technical Contribution Award - Global Data Dive Competition - Feb, 2025 \paper{https://docs.google.com/presentation/d/1Vf_OaO8iUelxuGhwhaDS-ypwzlFKihkM}}
+  \vspace{-5pt}
+  \item{Finalist of NYU CUSP Public Data Challenge - Oct, 2024 \paper{https://docs.google.com/presentation/d/1GGL3gzV5mJ0KLAir6hazS33j1yG3p9-z6fRmqLYKfB0}}
+  \vspace{-5pt}
+  \item{NYU CUSP Experiential Scholars - Sept, 2024}
+  \vspace{-5pt}
+  \item{First Prize of National Intelligent Car Competition - Aug, 2023 \github{https://github.com/MazelTovy/smart-car-18th}}
+  \vspace{-5pt}
+  \item{Bronze Medal in the China Collegiate Programming Contest (CCPC) - Oct, 2023}
+\end{description}
+
+\vspace{-3pt}
+\section{References}
+\resumeSubHeadingListStart
+\resumeSubItem{Takahiro Yabe}{Assistant Professor at the Department of Technology Management and Innovation and the Center for Urban Science + Progress, New York University.}
+\resumeSubItem{Zhaoxi Zhang}{Assistant Professor at the College of Design, Construction and Planning, University of Florida (formerly Postdoctoral Researcher at NYU CUSP during the mentorship period).}
+\resumeSubItem{Tamir Mendel}{Postdoctoral Researcher at the Department of Technology Management and Innovation, New York University.}
+\resumeSubHeadingListEnd
+
+\end{document}
