@@ -171,33 +171,33 @@
       {Co-first Author, Neural Information Processing Systems (NeurIPS) 2025 Spotlight}{Mar 2025 - Aug 2025}
     \resumeItemListStart
       \resumeItem{Theoretical Innovation}
-      {Challenged conventional "long-sequence information gain hypothesis" through systematic experimentation; discovered that appropriately truncating historical data paradoxically enhances prediction accuracy by eliminating redundant features and noise.}
+      {Challenged the prevailing long-sequence information gain hypothesis by identifying a counterintuitive phenomenon where strategic input truncation enhances forecasting accuracy. Leveraged the Information Bottleneck theory to formalize the trade-off between compression and prediction, proposing that explicit redundancy reduction in the latent space is critical for effective temporal signal extraction.}
       \resumeItem{Methodological Framework}
-      {Developed AMRC (Adaptive Masking Loss with Representation Consistency) framework based on information bottleneck theory; integrated dynamic masking loss for discriminative temporal segment identification and representation consistency constraints for stable mapping relationships.}
+      {Proposed \textbf{Adaptive Masking Loss with Representation Consistency (AMRC)}, a novel optimization framework consisting of two mechanisms: an \textbf{Adaptive Masking Loss} that utilizes stochastic approximation to dynamically identify and retain discriminative temporal segments, and an \textbf{Embedding Similarity Penalty} that enforces geometric consistency between input embeddings and output manifolds to mitigate semantic inconsistency and representation collapse.}
       \resumeItem{Performance Achievement}
-      {Achieved significant improvements across multiple datasets; over 50\% of samples exhibited improved predictive performance while effectively suppressing redundant feature learning.}
+      {Demonstrated that the proposed constraints effectively restructure the optimization landscape, suppressing the learning of noise and irrelevant fluctuations. Validated the method's architecture-agnostic capability to enhance generalization and robustness across diverse backbones on standard multivariate benchmarks.}
     \resumeItemListEnd
     
     \resumeLongTitleSubheading
-      {A Hybrid Framework for Evaluating and Enhancing Syntactic and Semantic Diversity \paper{https://openreview.net/forum?id=iwA66tqyPo}}{Under Review}
+      {A Hybrid Framework for Evaluating and Enhancing Syntactic and Semantic Diversity}{Under Review}
       {First Author, Under Review}{Jan 2025 - July 2025}
     \resumeItemListStart
-      \resumeItem{Framework}
-      {Designed and implemented a hybrid framework integrating probabilistic generative models with LLMs for synthetic data generation in low-resource scenarios.}
-      \resumeItem{Innovation}
-      {Pioneered reference-free metrics for syntactic and semantic diversity evaluation, eliminating dependency on gold standards; leveraged LLMs for realistic text refinement while maintaining semantic integrity.}
-      \resumeItem{Performance}
-      {Enhanced downstream classification with 13\% F1-score improvement; generated text achieved higher human evaluation scores for naturalness and fluency while preserving key linguistic patterns.}
+      \resumeItem{Theoretical Innovation \& Methodology}
+      {Proposed a dual-stage hybrid generation paradigm to address the homogenization trade-off in low-resource NLG. Strategically decoupled syntactic skeleton generation from semantic refinement by utilizing probabilistic generative priors to capture diverse latent structures, followed by contextualization to ensure linguistic fidelity. This approach effectively reconstructs grammatically sound text while preserving the structural variance often lost in direct LLM generation.}
+      \resumeItem{Metric Design: SynDiv}
+      {Pioneered SynDiv, a reference-free metric for quantifying syntactic diversity without relying on gold standards. Innovatively modeled dependency parse trees as graphs and utilized Graph Laplacian spectral decomposition to extract fine-grained structural features from eigenvectors, enabling mathematically rigorous assessment of syntactic heterogeneity in unsupervised settings.}
+      \resumeItem{Performance \& Insight}
+      {Demonstrated that the hybrid framework induces Gaussian-like distributions in both semantic and syntactic feature spaces, significantly mitigating inherent training data biases. The augmented data yielded improvement on fine-grained sentiment classification (GoEmotions) establishing a strong correlation between structural diversity and model generalization boundaries.}
     \resumeItemListEnd
     
     \resumeSubheading
-      {Urban Mobility Prediction for Commercial Site Selection}{Guided Study}
+      {Thinking on the Move (ToM): Generative ABM for Urban Simulation}{}
       {NYU Center for Urban Science and Progress (Mentor: \textit{Prof. Takahiro Yabe})}{June 2025 - Present}
     \resumeItemListStart
-      \resumeItem{LLM-enhanced Agent Modeling}
-      {Integrated Dewey and Cuebiq mobility datasets for Brooklyn Downtown analysis; pioneered LLM-generated user profiles in agent-based modeling to simulate individual decision-making and aggregate mobility behaviors for realistic forecasting.}
-      \resumeItem{Predictive Analytics Framework}
-      {Established evaluation framework benchmarking LLM-enhanced models against conventional discrete choice and gravity models; developed commercial site selection optimization through predictive mobility analytics.}
+      \resumeItem{Generative Agent Architecture}
+      {Developed a novel generative agent-based modeling framework that utilizes fine-tuned open-source LLMs as the cognitive core of urban agents. By aligning the LLMs with granular mobility traces from Safegraph and Cuebiq data, the framework successfully enables agents to simulate complex, non-linear human decision-making processes and trajectory planning, surpassing the predictive accuracy of traditional gravity and discrete choice models.}
+      \resumeItem{Predictive Analytics \& Causal Inference Framework}
+      {Proposed a counterfactual reasoning mechanism within the simulation to assess the impact of spatial interventions. Enabled the system to generate high-fidelity what-if scenarios, moving beyond correlation-based forecasting to provide mechanistic insights into how urban infrastructure changes causally propagate through collective mobility behaviors and retail dynamics}
     \resumeItemListEnd
     
     \resumeSubheading
@@ -205,34 +205,47 @@
       {NYU Center for Urban Science and Progress (Mentor: \textit{Prof. Zhaoxi Zhang})}{Dec 2024 - Apr 2025}
     \resumeItemListStart
       \resumeItem{Data Engineering}
-      {Designed scalable ETL pipeline for processing and integrating 15+ diverse educational datasets; implemented data quality monitoring with Great Expectations and optimized PostGIS queries for spatial joins.}
+      {Architected a robust spatial-data infrastructure to integrate heterogeneous urban substrates, harmonizing disparate educational metrics with geospatial contexts. Addressed data inconsistency challenges through automated validity monitoring and advanced spatial indexing, establishing a unified analytical foundation for high-dimensional urban modeling.}
       \resumeItem{Geospatial Analysis}
-      {Developed interactive platform visualizing geographic and school performance data; implemented Gemini-powered recommendation system for personalized school selection advice.}
+      {Developed a context-aware advisory framework that synergizes GIS with LLMs. Implemented EduRAG to translate complex spatial-performance metrics into personalized insights, effectively bridging the gap between quantitative urban analytics and user-centric decision-making.}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 \vspace{-3pt}
 \section{Experience}
   \resumeSubHeadingListStart
-    \resumeSubheading
-    {Global Data Dive Competition - Skyline \& Sustainability \paper{https://docs.google.com/presentation/d/1Vf_OaO8iUelxuGhwhaDS-ypwzlFKihkM}}{New York, NY}{Best Technical Contribution Award Winner}{Feb 2025}
-		\resumeItemListStart
-      \resumeItem{Advanced LLM Integration}
-      {Implemented LLaMA-3-8B model with custom RAG architecture for real-time building energy efficiency analysis; optimized vector retrieval for 3D building data querying and developed prompt engineering techniques for domain-specific responses.}
-      \resumeItem{Urban Sustainability Platform}
-      {Created interactive 3D visualization of NYC buildings with energy compliance metrics; built end-to-end solution for policymakers and investors to assess sustainability impact through natural language queries and geospatial analytics.}
-		\resumeItemListEnd
+    % \resumeSubheading
+    % {Global Data Dive Competition - Skyline \& Sustainability \paper{https://docs.google.com/presentation/d/1Vf_OaO8iUelxuGhwhaDS-ypwzlFKihkM}}{New York, NY}{Best Technical Contribution Award Winner}{Feb 2025}
+		% \resumeItemListStart
+    %   \resumeItem{Advanced LLM Integration}
+    %   {Implemented LLaMA-3-8B model with custom RAG architecture for real-time building energy efficiency analysis; optimized vector retrieval for 3D building data querying and developed prompt engineering techniques for domain-specific responses.}
+    %   \resumeItem{Urban Sustainability Platform}
+    %   {Created interactive 3D visualization of NYC buildings with energy compliance metrics; built end-to-end solution for policymakers and investors to assess sustainability impact through natural language queries and geospatial analytics.}
+		% \resumeItemListEnd
 		
     \resumeSubheading
-    {National College Student Smart Car Competition - Intelligent Vision Group \github{https://github.com/MazelTovy/smart-car-18th}}{Dalian, China}{Team Leader \& Primary Contributor - First Prize Winner}{Dec 2022 - July 2023}
-		\resumeItemListStart
-      \resumeItem{System Integration \& Leadership}
-      {Led 5-member multidisciplinary team through complete autonomous vehicle development cycle; designed and implemented integrated control algorithms for mechanical structure, embedded systems, and machine learning components.}
-      \resumeItem{Hardware \& Control Systems}
-      {Engineered Mecanum wheel-based chassis with 3D-printed modular storage compartments; developed custom PCB with NXP RT1064 microcontroller, DRV8701 motor drivers, and sensor fusion from ICM-20602 gyroscope and 4-directional encoders for precise motion control using Kalman filtering and PID optimization.}
-      \resumeItem{Computer Vision \& Automation}
-      {Implemented MobileNetV2-based object classification system with custom dataset captured using OpenART; achieved end-to-end automation for card detection, pickup, sorting, and storage tasks through integrated mechanical arm with SPT5410 servos and electromagnetic actuators.}
-		\resumeItemListEnd
+    {SnowFox Technology Co., Ltd.}{Remote}
+    {Founder \& Embedded System Architect}{Nov 2022 - Apr 2024}
+    \resumeItemListStart
+        \resumeItem{Resource-Constrained Sensor Fusion}
+        {Architected a low-latency sensor fusion framework for wearable MEMS inertial arrays. Implemented a multi-rate Extended Kalman Filter with optimized fixed-point quaternion arithmetic, effectively resolving gimbal lock issues and drift accumulation on power-constrained microcontrollers.}
+        \resumeItem{Edge-Cloud Biomechanical Analytics}
+        {Developed a hierarchical motion analysis pipeline fusing Inverse Kinematics solvers with edge-deployed Bi-directional RNNs. Enabled real-time extraction of biomechanical features and movement classification, establishing a robust data synchronization protocol with AWS IoT Core for large-scale trajectory analysis.}
+        \resumeItem{System Validation \& Deployment}
+        {Validated the system's robustness and fault tolerance through extensive field testing in dynamic alpine environments, demonstrating stable performance under extreme temperature variations and high-impact motion scenarios.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Autonomous Mobile Manipulation Platform (Smart Car Competition)}{Dalian, China}
+    {Student Research Lead}{Dec 2022 - July 2023}
+    \resumeItemListStart
+        \resumeItem{Cyber-Physical System Design}
+        {Led the development of an autonomous mobile robot integrating perception, decision-making, and actuation modules. Designed a holonomic motion control architecture for the Mecanum-wheeled chassis, utilizing customized PCBs to facilitate high-frequency communication between perception units and motor drivers.}
+        \resumeItem{State Estimation \& Control}
+        {Implemented a closed-loop control system fusing gyroscopic data with odometry via Kalman Filtering. Addressed non-linearities in mechanical transmission through PID parameter optimization, significantly enhancing trajectory tracking precision and dynamic stability against mechanical vibrations.}
+        \resumeItem{Efficient Perception-Actuation Pipeline}
+        {Deployed MobileNetV3 on edge processors for real-time target recognition. Engineered an automated manipulation logic that synchronizes visual feedback with mechanical arm inverse kinematics, achieving end-to-end autonomy in dynamic sorting tasks.}
+    \resumeItemListEnd
     % \resumeSubheading{Dalian Jiaotong University{On-site}
     % {Research Assistant (Intern)}{Dec 2023 - May 2024}
     % \resumeItemListStart
@@ -243,20 +256,8 @@
     % \resumeItem{Object Recognition}
     % {Trained a MobileNetv2-based classifier on custom dataset; implemented distributed inference on edge devices with TensorRT optimization.}
     % \resumeItemListEnd
-		
-    \resumeSubheading{SnowFox Technology Co., Ltd.}{Remote}
-		{Embedded System Developer (Entrepreneurship)}{Nov 2022 - Apr 2024}
-		\resumeItemListStart
-        \resumeItem{Motion Capture \& Real-time Processing}
-        {Developed sensor fusion firmware for STM32F4 microcontrollers with MPU9250 9-DoF IMU arrays; implemented multi-rate EKF and quaternion-based orientation estimation with 200Hz sampling and efficient fixed-point computation for power-constrained wearable devices.}
-        \resumeItem{3D Visual Analytics}
-        {Created real-time biomechanical analysis pipeline with Unity HDRP renderer, IK solver optimization, and TensorFlow Lite for edge-deployed BiRNN movement classification (96.4\% accuracy); integrated performance metrics dashboard and RESTful API for cloud synchronization through AWS IoT Core.}
-        \resumeItem{Impact}
-        {Deployed at 5 ski resorts, increasing user 
-        satisfaction by 50\% and expanding customer 
-        base over 1,000 users.}
-		\resumeItemListEnd
 \resumeSubHeadingListEnd
+    
 
 %-----------PROJECTS-----------------
 \vspace{-3pt}

@@ -1,0 +1,14 @@
+27228_Abstain_Mask_Retain_Core.pdf
+2002050219_djtu.pdf
+*.log
+*.aux
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+*.synctex.gz(busy)
